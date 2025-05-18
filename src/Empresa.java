@@ -12,7 +12,7 @@ public class Empresa {
 
         this.nombre = nombre;
         this.razonSocial = razonSocial;
-        this.cuil = cuil;
+        this.cuil = Cuil;
     }
 
     public String getNombre() {
@@ -45,6 +45,16 @@ public class Empresa {
 
     public void addSucursal(Sucursal sucursal){
         this.sucursales.add(sucursal);
-        sucursal.setEmpresa(this);
+
+    }
+
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                ", razonSocial='" + razonSocial + '\'' +
+                ", cuil=" + cuil +
+                ", sucursales=" + sucursales +
+                '}';
     }
 }

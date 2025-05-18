@@ -10,6 +10,11 @@ public class Imagen {
         this.denominacion = denominacion;
     }
 
+
+    public Imagen(String denominacion) {
+        this.denominacion = denominacion;
+    }
+
     @Override
     public String toString() {
         return "Imagen{" +

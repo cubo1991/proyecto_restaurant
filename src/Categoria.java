@@ -5,6 +5,7 @@ public class Categoria {
     private String denominacion;
     private Set<Articulo> articulos;
     private Set<Categoria> subcategorias;
+    private Categoria categoriaPadre = null;
 
     public Categoria(String denominacion) {
         this.denominacion = denominacion;
@@ -37,7 +38,16 @@ public class Categoria {
         if (this.subcategorias == null) {
             this.subcategorias = new HashSet<>();
         }
+        subcategoria.setCategoriaPadre(this);
         this.subcategorias.add(subcategoria);
+    }
+
+    public Categoria getCategoriaPadre() {
+        return categoriaPadre;
+    }
+
+    public void setCategoriaPadre(Categoria categoriaPadre) {
+        this.categoriaPadre = categoriaPadre;
     }
 
     @Override
@@ -46,6 +56,7 @@ public class Categoria {
                 "denominacion='" + denominacion + '\'' +
                 ", articulos=" + articulos +
                 ", subcategorias=" + subcategorias +
+
                 '}';
     }
 }

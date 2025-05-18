@@ -8,14 +8,37 @@ public class Sucursal {
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;
 
-    private Empresa empresa;
+
     private Set<Promocion> promociones = new HashSet<>();
     private Set<ArticuloManufacturado> articuloManufacturados = new HashSet<>();
+
+    private Set<Categoria> categorias;
+
+    private Domicilio domicilio;
 
     public Sucursal (String nombre, LocalTime horarioApertura, LocalTime horarioCierre) {
         this.nombre = nombre;
         this.horarioApertura = horarioApertura;
         this.horarioCierre = horarioCierre;
+    }
+
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Domicilio domicilio) {
+        this.domicilio = domicilio;
+    }
+
+    public void addCategoria(Categoria categoria) {
+        if (categorias == null) {
+            categorias = new HashSet<>();
+        }
+        categorias.add(categoria);
+    }
+
+    public void removeCategoria(Categoria categoria) {
+        categorias.remove(categoria);
     }
 
     public String getNombre() {
@@ -42,13 +65,7 @@ public class Sucursal {
         this.horarioCierre = horarioCierre;
     }
 
-    public Empresa getEmpresa() {
-        return empresa;
-    }
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
 
     public void addPromocion (Promocion promocion){
         this.promociones.add(promocion);
@@ -60,5 +77,19 @@ public class Sucursal {
 
     public void addArticuloManufacturado(ArticuloManufacturado articulo){
         this.articuloManufacturados.add(articulo);
+    }
+
+    @Override
+    public String toString() {
+        return "Sucursal{" +
+                "nombre='" + nombre + '\'' +
+                ", horarioApertura=" + horarioApertura +
+                ", horarioCierre=" + horarioCierre +
+
+                ", promociones=" + promociones +
+                ", articuloManufacturados=" + articuloManufacturados +
+                ", categorias=" + categorias +
+                ", domicilio=" + domicilio +
+                '}';
     }
 }
