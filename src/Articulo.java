@@ -1,8 +1,8 @@
 import java.util.HashSet;
 
 public abstract class Articulo {
-    private String denominacion;
-    private double precioVenta;
+    protected String denominacion;
+    protected double precioVenta;
     private UnidadMedida unidadMedida;
     private HashSet<Imagen> imagenes;
 
