@@ -1,6 +1,13 @@
-public class Articulo {
-    protected String denominacion;
-    protected double precioVenta;
+import java.util.HashSet;
+
+public abstract class Articulo {
+    private String denominacion;
+    private double precioVenta;
+    private UnidadMedida unidadMedida;
+    private HashSet<Imagen> imagenes;
+
+    public Articulo() {
+    }
 
     public Articulo(String denominacion, double precioVenta) {
         this.denominacion = denominacion;
@@ -15,19 +22,27 @@ public class Articulo {
         this.denominacion = denominacion;
     }
 
-    public Double getPrecioVenta() {
+    public double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(Double precioVenta) {
+    public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
 
-    @Override
-    public String toString() {
-        return "Articulo{" +
-                "denominacion='" + denominacion + '\'' +
-                ", precioVenta=" + precioVenta +
-                '}';
+    public UnidadMedida getUnidadMedida() {
+        return unidadMedida;
+    }
+
+    public void setUnidadMedida(UnidadMedida unidadMedida) {
+        this.unidadMedida = unidadMedida;
+    }
+
+    public HashSet<Imagen> getImagenes() {
+        return imagenes;
+    }
+
+    public void setImagenes(HashSet<Imagen> imagenes) {
+        this.imagenes = imagenes;
     }
 }
