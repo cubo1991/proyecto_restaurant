@@ -21,6 +21,19 @@ public class Pedido {
         return sucursal;
     }
 
+    public Pedido(LocalTime horaEstimadaFinalizacion, Double total, Double totalCosto, Estado estado, TipoDeEnvio tipoDeEnvio, FormaPago formaPago, LocalDate fechaPedido, Sucursal sucursal, Domicilio domicilio, Factura factura) {
+        this.horaEstimadaFinalizacion = horaEstimadaFinalizacion;
+        this.total = total;
+        this.totalCosto = totalCosto;
+        this.estado = estado;
+        this.tipoDeEnvio = tipoDeEnvio;
+        this.formaPago = formaPago;
+        FechaPedido = fechaPedido;
+        this.sucursal = sucursal;
+        this.domicilio = domicilio;
+        this.factura = factura;
+    }
+
     public void setSucursal(Sucursal sucursal) {
         this.sucursal = sucursal;
     }
