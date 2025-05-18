@@ -3,19 +3,25 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-//        //Emma
-//        //pais
-//        Pais pais = new Pais();
-//        pais.setNombre("Argentina");
-//        Provincia provincia = new Provincia("Mendoza",pais);
-//        Localidad maipu = new Localidad("Maipu",provincia);
-//        Localidad godoyCruz = new Localidad("Godoy Cruz",provincia);
-//        Localidad guaymallen = new Localidad("Guaymallen",provincia);
-//
-//        // usuarios
-//        Usuario usuario1 = new Usuario("chinguencha");
-//        Usuario usuario2 = new Usuario("anacleto");
-//
+        //Pais y provincia
+        Pais argentina = new Pais("Argentina");
+        Provincia mendoza = new Provincia("Mendoza",argentina);
+
+        //Localidades
+        Localidad maipu = new Localidad("Maipu",mendoza);
+        Localidad godoyCruz = new Localidad("Godoy Cruz",mendoza);
+        Localidad guaymallen = new Localidad("Guaymallen",mendoza);
+
+        //Usuarios
+        Usuario usuario1 = new Usuario("001","DavidLopez");
+        Usuario usuario2 = new Usuario("002","FerroTomi");
+
+        //direcciones
+        Domicilio d1 = new Domicilio("Miguel Cane",859,5511,maipu);
+        Domicilio d2 = new Domicilio("Bandera de los Andes",350,5519,guaymallen);
+        Domicilio d3 = new Domicilio("Av. San Martin Sur",444,5501,godoyCruz);
+
+
 //        Cliente cliente1 = new Cliente("David","Lopez","2615848235","locolope@gmail.com");
 //        cliente1.setUsuario(usuario1);
 //        cliente1.setDomicilio(new Domicilio("calle falsa",123,5513,guaymallen));
@@ -26,15 +32,17 @@ public class Main {
 //        cliente2.setDomicilio(new Domicilio("carril garompa",1500,5514,godoyCruz ));
 //
 //
-//        Domicilio domicilio = new Domicilio("Miguel Cane",859,5511,maipu);
+
 //        Sucursal sucursal1= new Sucursal("Casa Matriz", LocalDate.now(),LocalDate.now().plus(Duration.ofHours(8)),true);
-//        sucursal1.setDomicilio(domicilio);
+//        sucursal1.setDomicilio(d1);
 //
+
 //        Categoria categoria1= new Categoria("Galletas");
 //        Categoria subCategoria1= new Categoria("galletasDulces");
 //        categoria1.addCategoria(subCategoria1);
 //
         // Tomas
+
 
         ArticuloInsumo articuloInsumo1 = new ArticuloInsumo("Quilmes 1L", 5000,
                 2500, 100, 150,false);
