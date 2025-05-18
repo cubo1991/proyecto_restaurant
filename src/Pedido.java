@@ -1,7 +1,8 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+
+
 
 public class Pedido {
     private LocalTime horaEstimadaFinalizacion;
@@ -11,7 +12,7 @@ public class Pedido {
     private TipoDeEnvio tipoDeEnvio;
     private FormaPago formaPago;
     private LocalDate FechaPedido;
-    private List<DetallePedido> detallePedidos;
+    private HashSet<DetallePedido> detallePedidos;
     private Sucursal sucursal;
     private Domicilio domicilio;
     private Factura factura;
@@ -56,7 +57,7 @@ public class Pedido {
 
     public void addDetallesPedido(DetallePedido detallePedido) {
         if (detallePedidos == null) {
-            detallePedidos = new ArrayList<>();
+            detallePedidos = new HashSet<>();
         }
         detallePedidos.add(detallePedido);
     }
