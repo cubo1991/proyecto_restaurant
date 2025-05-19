@@ -8,7 +8,8 @@ public class ArticuloManufacturado extends Articulo {
         private String preparacion;
         private Set<ArticuloManufacturadoDetalle> detallesDeArticulo;
 
-        public ArticuloManufacturado(String descripcion, int tiempoEstimadoMinutos, String preparacion, String denominacion) {
+        public ArticuloManufacturado(String denominacion, double precioVenta,String descripcion, int tiempoEstimadoMinutos, String preparacion) {
+            super(denominacion, precioVenta);
             this.descripcion = descripcion;
             this.tiempoEstimadoMinutos = tiempoEstimadoMinutos;
             this.preparacion = preparacion;

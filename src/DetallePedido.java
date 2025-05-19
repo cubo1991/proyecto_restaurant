@@ -2,10 +2,20 @@ public class DetallePedido {
     private Integer cantidad;
     private Double subTotal;
     private Articulo articulo;
+    private Promocion promocion;
 
-    public DetallePedido(Integer cantidad, Double subTotal) {
+    public DetallePedido(Integer cantidad, Articulo articulo) {
         this.cantidad = cantidad;
-        this.subTotal = subTotal;
+        this.articulo = articulo;
+//        this.calcularSubtotal(); tiene que calcular precio x cantidad de cada insumo
+        // calcularSubtotal();
+            // una u otra.
+    }
+
+    public DetallePedido(Integer cantidad, Promocion promocion) {
+        this.cantidad = cantidad;
+        this.promocion = promocion;
+//        this.calcularSubtotal(); tiene que poner precio x cantidad de la promo solita. mas facil.
     }
 
     public Integer getCantidad() {

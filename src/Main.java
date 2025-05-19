@@ -63,12 +63,7 @@ public class Main {
 
         articuloInsumo1.addImagen(imagen1);
         articuloInsumo2.addImagen(imagen2);
-
-        DetallePedido detallePedido1 = new DetallePedido(1,0.0);
-        detallePedido1.setArticulo(articuloInsumo1);
-
-        DetallePedido detallePedido2 = new DetallePedido(2, 0.0);
-        detallePedido2.setArticulo(articuloInsumo2);
+        
 
 
         ArticuloManufacturadoDetalle articuloManufacturadoDetalle1 = new ArticuloManufacturadoDetalle(1);
@@ -77,10 +72,10 @@ public class Main {
         ArticuloManufacturadoDetalle articuloManufacturadoDetalle2 = new ArticuloManufacturadoDetalle(2);
         articuloManufacturadoDetalle2.setArticuloInsumo(articuloInsumo2);
 
-        ArticuloManufacturado articuloManufacturado1 = new ArticuloManufacturado("Esto es un art manufacturado", 50, "Se hace de esta forma", "Esta es una denominacio");
+        ArticuloManufacturado articuloManufacturado1 = new ArticuloManufacturado("denominacion noseque",20, "Esto es un art manufacturado", 50, "Se hace de esta forma");
 
-        ArticuloManufacturado articuloManufacturado2 = new ArticuloManufacturado("Esto es otro articulo manufacturado", 40, "Se hace de esta otra forma", "Esta es una denominacio");
-        ArticuloManufacturado articuloManufacturado3 = new ArticuloManufacturado("Otro art manufacturado", 20, "Se prepara", "Tiene una denominacion");
+        ArticuloManufacturado articuloManufacturado2 = new ArticuloManufacturado("denominacion noseque",20, "Esto es un art manufacturado", 50, "Se hace de esta forma");
+        ArticuloManufacturado articuloManufacturado3 = new ArticuloManufacturado("denominacion noseque",20, "Esto es un art manufacturado", 50, "Se hace de esta forma");
 
         articuloManufacturado1.addDetalle(articuloManufacturadoDetalle1);
         articuloManufacturado1.addImagen(imagen1);
@@ -90,6 +85,8 @@ public class Main {
         articuloManufacturado2.addDetalle(articuloManufacturadoDetalle2);
         articuloManufacturado2.addImagen(imagen2);
         articuloManufacturado2.setUnidadMedida(unidadMedida);
+
+
 
         // Categorias
 
@@ -117,6 +114,11 @@ public class Main {
         promocion2.addImagenes(imagen2);
         promocion2.addArticulos(articuloManufacturado2);
 
+        // DetallePedido
+        // Con Articulo
+        DetallePedido detallePedido1 = new DetallePedido(1, articuloManufacturado1);
+        // Con Promocion
+        DetallePedido detallePedido2 = new DetallePedido(2, promocion1);
 
         // Sucursales
 
