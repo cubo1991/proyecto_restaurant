@@ -1,6 +1,9 @@
+
+
 public class ArticuloManufacturadoDetalle {
     private Integer cantidad;
     private ArticuloInsumo articuloInsumo;
+
 
     public ArticuloManufacturadoDetalle(Integer cantidad) {
         this.cantidad = cantidad;
@@ -21,6 +24,8 @@ public class ArticuloManufacturadoDetalle {
     public void setArticuloInsumo(ArticuloInsumo articuloInsumo) {
         this.articuloInsumo = articuloInsumo;
     }
+
+
 
     @Override
     public String toString() {

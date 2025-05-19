@@ -22,6 +22,16 @@ public class Cliente {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Imagen imagen, Usuario usuario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+        this.imagen = imagen;
+        this.usuario = usuario;
+    }
+
     public Cliente() {}
 
     public void addPedidos(Pedido pedido) {

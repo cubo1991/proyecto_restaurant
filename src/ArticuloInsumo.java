@@ -10,6 +10,7 @@ public class ArticuloInsumo extends Articulo {
         this.stockActual = stockActual;
         this.stockMaximo = stockMaximo;
         this.esParaElaborar = esParaElaborar;
+        this.denominacion = denominacion;
     }
 
     public double getPrecioCompra() {
