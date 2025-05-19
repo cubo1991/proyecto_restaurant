@@ -6,8 +6,8 @@ public class Domicilio {
     private int cp;
     private Localidad localidad;
 
-    public Domicilio() {
-    }
+//    public Domicilio() {
+//    }
 
     public Domicilio(String nombre, int numero, int cp, Localidad localidad) {
         this.nombre = nombre;

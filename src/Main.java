@@ -18,14 +18,14 @@ public class Main {
         Usuario usuario2 = new Usuario("002","FerroTomi");
 
         //direcciones
-        Domicilio d1 = new Domicilio("Miguel Cane",859,5511,maipu);
-        Domicilio d2 = new Domicilio("Bandera de los Andes",350,5519,guaymallen);
+        Domicilio d1 = new Domicilio("San Martin", 1000, 5501, maipu);
+        Domicilio d2 = new Domicilio("San Juan", 500, 5502, godoyCruz);
 
 
         //Domicilio
 
-        Domicilio domicilio = new Domicilio("Lencinas", 985, 5500, guaymallen);
-        Domicilio domicilio2 = new Domicilio("Rio Mendoza", 985, 5500, maipu);
+        Domicilio domicilio = new Domicilio("San Miguel", 111, 5503, guaymallen);
+        Domicilio domicilio2 = new Domicilio("San Pedro", 222, 5504, godoyCruz);
 
         //Imagen
 
@@ -72,14 +72,15 @@ public class Main {
 
 
         ArticuloManufacturadoDetalle articuloManufacturadoDetalle1 = new ArticuloManufacturadoDetalle(1);
-
+        articuloManufacturadoDetalle1.setArticuloInsumo(articuloInsumo1);
 
         ArticuloManufacturadoDetalle articuloManufacturadoDetalle2 = new ArticuloManufacturadoDetalle(2);
-
+        articuloManufacturadoDetalle2.setArticuloInsumo(articuloInsumo2);
 
         ArticuloManufacturado articuloManufacturado1 = new ArticuloManufacturado("Esto es un art manufacturado", 50, "Se hace de esta forma", "Esta es una denominacio");
 
         ArticuloManufacturado articuloManufacturado2 = new ArticuloManufacturado("Esto es otro articulo manufacturado", 40, "Se hace de esta otra forma", "Esta es una denominacio");
+        ArticuloManufacturado articuloManufacturado3 = new ArticuloManufacturado("Otro art manufacturado", 20, "Se prepara", "Tiene una denominacion");
 
         articuloManufacturado1.addDetalle(articuloManufacturadoDetalle1);
         articuloManufacturado1.addImagen(imagen1);
@@ -104,6 +105,7 @@ public class Main {
         categoria2.agregarArticulo(articuloManufacturado1);
         categoria2.agregarArticulo(articuloManufacturado2);
 
+        subCategoria2.agregarArticulo(articuloManufacturado3);
 
         //Promociones
 
